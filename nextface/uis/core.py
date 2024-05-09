@@ -10,6 +10,8 @@ from nextface import metadata, logger, wording
 from nextface.uis.typing import Component, ComponentName
 from nextface.filesystem import resolve_relative_path
 
+os.environ['GRADIO_ANALYTICS_ENABLED'] = '0'
+
 gradio.processing_utils.encode_array_to_base64 = overrides.encode_array_to_base64
 gradio.processing_utils.encode_pil_to_base64 = overrides.encode_pil_to_base64
 
